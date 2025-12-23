@@ -14,8 +14,7 @@ build/
 *.db
 backend/data/
 
-# Environment
-.env
+# Environment (keep .env for defaults, ignore local overrides)
 .env.local
 .env.*.local
 
