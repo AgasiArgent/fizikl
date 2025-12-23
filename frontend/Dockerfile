@@ -1,4 +1,4 @@
-# Frontend Dockerfile
+# Frontend Dockerfile - Production
 FROM node:20-alpine
 
 WORKDIR /app
@@ -12,8 +12,12 @@ RUN npm ci
 # Copy source code
 COPY . .
 
+# Build for production
+ENV NEXT_PUBLIC_API_URL=http://localhost:8000
+RUN npm run build
+
 # Expose port
 EXPOSE 3000
 
-# Start development server
-CMD ["npm", "run", "dev"]
+# Start production server
+CMD ["npm", "start"]
