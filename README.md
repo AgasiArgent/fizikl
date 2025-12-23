@@ -16,7 +16,7 @@
 
 ```bash
 # Клонировать репозиторий
-git clone <repository-url>
+git clone https://github.com/AgasiArgent/fizikl.git
 cd fizikl
 
 # Запустить приложение
